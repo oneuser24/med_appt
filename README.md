@@ -1,9 +1,8 @@
 ## coding-project-template
 The prototype for a landing page of this capstone project was forked from [ibm-developer-skills-network](https://github.com/ibm-developer-skills-network/grihf-frontend_capstone_starter_code).
 
-## IBM course 'Front-End Development Capstone Project'
-
 # Medical Appointment Booking
+## Capstone project for IBM Front-End Developer Professional Certificate
 A website for online booking
 
 ## Learning objectives
