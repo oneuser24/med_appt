@@ -10,7 +10,7 @@ const Sign_Up = () => {
                     <h1>Sign Up</h1>
                 </div>
                 <div className="signup-text1" style={{"text-align": "left"}}> {/* Text for existing members to log in */}
-                    Already a member? <span><a href="../Login/Login.html" style={{"color":"#2190FF"}}> Login</a></span>
+                    Already a member? <span><a href="/login" style={{"color":"#2190FF"}}> Login</a></span>
                 </div>
                 <div className="signup-form"> {/* Form for user sign-up */}
                     <form> {/* Start of the form */}
