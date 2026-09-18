@@ -22,7 +22,7 @@ const Sign_Up = () => {
 
                         <div className="form-group"> {/* Form group for user's phone number */}
                             <label for="phone">Phone</label> {/* Label for phone input field */}
-                            <input type="tel" name="phone" id="phone" required className="form-control" placeholder="Enter your phone number" aria-describedby="helpId" /> {/* Tel input field for phone number */}
+                            <input type="tel" name="phone" id="phone" required pattern="[0-9]{10}" className="form-control" placeholder="Enter your 10 digits phone number" aria-describedby="helpId" /> {/* Tel input field for phone number */}
                         </div>
 
                         <div className="form-group"> {/* Form group for user's email */}
