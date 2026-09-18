@@ -71,7 +71,7 @@ const Navbar = () => {
                     </li>
                     {/* List item for the 'Login' link with a button */}
                     <li className="link">
-                        <a href="../Login/Login.html">
+                        <a href="/login">
                         <button className="btn1">Login</button>
                         </a>
                     </li>
