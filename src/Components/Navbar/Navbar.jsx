@@ -38,7 +38,7 @@ const Navbar = () => {
       setShowDropdown(!showDropdown);
     }
 
-    useEffect(() => { 
+    useEffect(() => {
       const storedemail = sessionStorage.getItem("email");
 
       if (storedemail) {
@@ -62,7 +62,10 @@ const Navbar = () => {
           <Link to="/">Home</Link>
         </li>
         <li className="link">
-          <Link to="/search/doctors">Appointments</Link>
+          <Link to="/book-consultation">Appointments</Link>
+        </li>
+        <li className="link">
+          <Link to="/instant-consultation">Instant Consultation</Link>
         </li>
         <li className="link">
           <Link to="/healthblog">Health Blog</Link>

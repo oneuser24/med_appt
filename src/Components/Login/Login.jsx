@@ -66,7 +66,7 @@ const Login = () => {
             <h2>Login</h2>
           </div>
           <div className="login-text">
-            Are you a new member? 
+            Are you a new member?
             <span>
               <Link to="/signup" style={{ color: '#2190FF' }}>
                 Sign Up Here
@@ -79,15 +79,15 @@ const Login = () => {
                     <div className="form-group">
                         <label htmlFor="email">Email</label>
                         {/* Input field for email */}
-                        <input 
-                            value={email} 
-                            onChange={(e) => setEmail(e.target.value)} 
-                            type="email" 
-                            name="email" 
-                            id="email" 
-                            className="form-control" 
-                            placeholder="Enter your email" 
-                            aria-describedby="helpId" 
+                        <input
+                            value={email}
+                            onChange={(e) => setEmail(e.target.value)}
+                            type="email"
+                            name="email"
+                            id="email"
+                            className="form-control"
+                            placeholder="Enter your email"
+                            aria-describedby="helpId"
                         />
                     </div>
                     {/* Input field for password */}
