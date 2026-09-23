@@ -55,7 +55,7 @@ const Notification = ({ children }) => {
                 <strong>Doctor:</strong> {doctorData?.name}
               </p>
               {appointmentData.map(appointment => (
-                                  {/* <div key={appointment.id}> */}
+                                  <div key={appointment.id}>
                                     <p className="appointment-card__message">
                                         <strong>Name:</strong> {appointment.name}
                                     </p>
@@ -68,7 +68,7 @@ const Notification = ({ children }) => {
                                     <p className="appointment-card__message">
                                         <strong>Time:</strong> {appointment.selectedSlot}
                                     </p>
-                                  {/* </div> */}
+                                  </div>
                                   )
                                 )
               }
