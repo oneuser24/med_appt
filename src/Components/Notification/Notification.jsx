@@ -1,6 +1,7 @@
 // Following code has been commented with appropriate comments for your reference.
 import React, { useEffect, useState } from 'react';
 import Navbar from '../Navbar/Navbar';
+import './Notification.css';
 
 // Function component Notification to display user notifications
 const Notification = ({ children }) => {
@@ -32,6 +33,7 @@ const Notification = ({ children }) => {
     if (storedAppointmentData) {
       setAppointmentData(storedAppointmentData);
     }
+
   }, []); // Empty dependency array ensures useEffect runs only once after initial render
 
   // Return JSX elements to display Navbar, children components, and appointment details if user is logged in
@@ -52,6 +54,23 @@ const Notification = ({ children }) => {
                 {/* Display doctor's name from doctorData */}
                 <strong>Doctor:</strong> {doctorData?.name}
               </p>
+              {appointmentData.map(appointment => (
+                                  <div key={appointment.id}>
+                                    <p className="appointment-card__message">
+                                        <strong>Name:</strong> {appointment.name}
+                                    </p>
+                                    <p className="appointment-card__message">
+                                        <strong>Phone:</strong> {appointment.phoneNumber}
+                                    </p>
+                                    <p className="appointment-card__message">
+                                        <strong>Date:</strong> {appointment.apptDate}
+                                    </p>
+                                    <p className="appointment-card__message">
+                                        <strong>Time:</strong> {appointment.selectedSlot}
+                                    </p>
+                                  </div>)
+                                )
+              }
             </div>
           </div>
         </>
