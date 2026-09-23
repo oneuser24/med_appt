@@ -56,11 +56,11 @@ const DoctorCard = ({ name, speciality, experience, ratings, profilePic }) => {
           trigger={
             <button className={`book-appointment-btn ${appointments.length > 0 ? 'cancel-appointment-btn' : ''}`}>
               {appointments.length > 0 ? (
-                <div>Cancel Appointment</div>
+                <><div>Cancel Appointment</div><div>No Cancellation Fee</div></>
               ) : (
-                <div>Book Appointment</div>
+                <><div>Book Appointment</div><div>No Booking Fee</div></>
               )}
-              <div>No Booking Fee</div>
+              {/* <div>No Booking Fee</div> */}
             </button>
           }
           modal
@@ -88,6 +88,8 @@ const DoctorCard = ({ name, speciality, experience, ratings, profilePic }) => {
                     <div className="bookedInfo" key={appointment.id}>
                       <p>Name: {appointment.name}</p>
                       <p>Phone Number: {appointment.phoneNumber}</p>
+                      <p>Date: {appointment.apptDate}</p>
+                      <p>Time: {appointment.selectedSlot}</p>
                       <button onClick={() => handleCancel(appointment.id)}>Cancel Appointment</button>
                     </div>
                   ))}
