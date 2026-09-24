@@ -83,7 +83,7 @@ const Sign_Up = () => {
                         </div>
                         <div className="form-group">
                             <label htmlFor="password">Password</label>
-                            <input value={password} onChange={(e) => setPassword(e.target.value)} type="password" name="password" id="password" className="form-control" placeholder="Enter your email" aria-describedby="helpId" />
+                            <input value={password} onChange={(e) => setPassword(e.target.value)} type="password" name="password" id="password" className="form-control" placeholder="Create password" aria-describedby="helpId" />
                         </div>
                         <div className="btn-group"> {/* Button group for form submission and reset */}
                             <button type="submit" className="btn btn-primary mb-2 mr-1 waves-effect waves-light">Submit</button> {/* Submit button */}
