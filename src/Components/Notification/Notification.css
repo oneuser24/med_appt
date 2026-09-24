@@ -1,8 +1,13 @@
 .appointment-card {
+    position: fixed;
+    top: 90px;
+    right: 25px;
+    z-index: 1000;
     background: #0baaff;
     padding: 10px;
     width: auto;
     color: white;
 }
+
 
 
