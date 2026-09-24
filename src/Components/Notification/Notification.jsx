@@ -10,6 +10,7 @@ const Notification = ({ children }) => {
   const [username, setUsername] = useState("");
   const [doctorData, setDoctorData] = useState(null);
   const [appointmentData, setAppointmentData] = useState(null);
+  const [showNotification, setShowNotification] = useState();
 
   // useEffect hook to perform side effects in the component
   useEffect(() => {
@@ -32,6 +33,7 @@ const Notification = ({ children }) => {
     // Set appointmentData state if storedAppointmentData exists
     if (storedAppointmentData) {
       setAppointmentData(storedAppointmentData);
+      setShowNotification(true);
     }
 
   }, []); // Empty dependency array ensures useEffect runs only once after initial render
@@ -44,7 +46,7 @@ const Notification = ({ children }) => {
       {/* Render children components */}
       {children}
       {/* Display appointment details if user is logged in and appointmentData is available */}
-      {isLoggedIn && appointmentData && (
+      {isLoggedIn && appointmentData && showNotification && (
         <>
           <div className="appointment-card">
             <div className="appointment-card__content">
@@ -54,24 +56,22 @@ const Notification = ({ children }) => {
                 {/* Display doctor's name from doctorData */}
                 <strong>Doctor:</strong> {doctorData?.name}
               </p>
-              {appointmentData.map(appointment => (
-                                  <div key={appointment.id}>
-                                    <p className="appointment-card__message">
-                                        <strong>Name:</strong> {appointment.name}
-                                    </p>
-                                    <p className="appointment-card__message">
-                                        <strong>Phone:</strong> {appointment.phoneNumber}
-                                    </p>
-                                    <p className="appointment-card__message">
-                                        <strong>Date:</strong> {appointment.apptDate}
-                                    </p>
-                                    <p className="appointment-card__message">
-                                        <strong>Time:</strong> {appointment.selectedSlot}
-                                    </p>
-                                  </div>
-                                  )
-                                )
-              }
+              <p className="appointment-card__message">
+                  <strong>Name:</strong> {appointmentData?.name}
+              </p>
+              <p className="appointment-card__message">
+                  <strong>Phone:</strong> {appointmentData?.phoneNumber}
+              </p>
+              <p className="appointment-card__message">
+                  <strong>Date:</strong> {appointmentData?.apptDate}
+              </p>
+              <p className="appointment-card__message">
+                  <strong>Time:</strong> {appointmentData?.selectedSlot}
+              </p>
+
+              <button onClick={() => setShowNotification(false)} >
+                Close
+              </button>
             </div>
           </div>
         </>
