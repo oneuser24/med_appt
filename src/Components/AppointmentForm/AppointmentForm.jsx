@@ -29,6 +29,7 @@ const AppointmentForm = ({ doctorName, doctorSpeciality, onSubmit }) => {
 
     const handleFormSubmit = (e) => {
       e.preventDefault();
+      localStorage.setItem(doctorName, JSON.stringify({ name, phoneNumber,  apptDate, selectedSlot}));
       onSubmit({ name, phoneNumber,  apptDate, selectedSlot});
       setName('');
       setPhoneNumber('');
