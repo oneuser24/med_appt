@@ -8,6 +8,7 @@ const Notification = ({ children }) => {
   // State variables to manage user authentication, username, doctor data, and appointment data
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [username, setUsername] = useState("");
+  const [userphone, setUserphone] = useState("");
   const [doctorData, setDoctorData] = useState(null);
   const [appointmentData, setAppointmentData] = useState(null);
   const [showNotification, setShowNotification] = useState();
@@ -16,6 +17,7 @@ const Notification = ({ children }) => {
   useEffect(() => {
     // Retrieve stored username, doctor data, and appointment data from sessionStorage and localStorage
     const storedUsername = sessionStorage.getItem('email');
+    const storedUserphone = sessionStorage.getItem('phone');
     const storedDoctorData = JSON.parse(localStorage.getItem('doctorData'));
     const storedAppointmentData = JSON.parse(localStorage.getItem(storedDoctorData?.name));
 
@@ -23,6 +25,10 @@ const Notification = ({ children }) => {
     if (storedUsername) {
       setIsLoggedIn(true);
       setUsername(storedUsername);
+    }
+
+      if (storedUserphone) {
+        setUserphone(storedUserphone);
     }
 
     // Set doctorData state if storedDoctorData exists
@@ -34,6 +40,14 @@ const Notification = ({ children }) => {
     if (storedAppointmentData) {
       setAppointmentData(storedAppointmentData);
       setShowNotification(true);
+
+        //if (storedAppointmentData.phoneNumber.toString() === userphone.toString()) {
+            //console.log('equal');
+            //console.log(userphone);
+            //setShowNotification(true);
+       //};
+
+
     }
 
   }, []); // Empty dependency array ensures useEffect runs only once after initial render
