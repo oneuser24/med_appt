@@ -43,12 +43,6 @@ function GiveReviews() {
 
   return (
     <div>
-      <h2>Form with Message</h2>
-      {!showForm ? (
-        // Display button to open the form
-        <button onClick={handleButtonClick}>Open Form</button>
-      ) : (
-        // Display form for giving feedback
         <form onSubmit={handleSubmit}>
           <h2>Give Your Feedback</h2>
           {/* Display warning message if not all fields are filled */}
@@ -64,7 +58,7 @@ function GiveReviews() {
           {/* Submit button for form submission */}
           <button type="submit">Submit</button>
         </form>
-      )}
+
       {/* Display the submitted message if available */}
       {submittedMessage && (
         <div>
@@ -73,7 +67,7 @@ function GiveReviews() {
         </div>
       )}
     </div>
-  );
+  )
 }
 
 export default GiveReviews;
