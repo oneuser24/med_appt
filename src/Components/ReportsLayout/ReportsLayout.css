@@ -1,0 +1,48 @@
+.reports-container {
+    width: 98%;
+    height: auto;
+    margin: 15% 1%;
+    text-align: left;
+  }
+
+.reports-table {
+  border-collapse: collapse;
+  font-size: 1em;
+  width: 100%;
+}
+
+.reports-table thead th {
+  background-color: #eeeeee;
+  text-align: left;
+}
+
+.reports-table th,
+.reports-table td {
+  padding: 12px 15px; /* Gives the cells breathing room */
+}
+
+.reports-table tbody tr {
+  border-bottom: 1px solid #bbbbbb; /* Subdued dividers between rows */
+}
+
+.reports-table thead tr {
+  border-bottom: 1px solid #bbbbbb; /* Subdued dividers between rows */
+}
+
+.reports-table td button {
+  width: auto;
+  color: white;
+}
+
+.reports-table td button a {
+  color: white;
+  text-decoration: none;
+}
+
+.reports-table td button:disabled {
+  background: grey;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+
