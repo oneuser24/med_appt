@@ -75,12 +75,18 @@ const Navbar = () => {
         </li>
         {isLoggedIn ? (
           <>
-            <span>Welcome, {username}</span>
+            <span >Welcome, <span onClick={handleDropdown}>{username}</span></span>
             <li className="link">
               <button className="btn2" onClick={handleLogout}>
                 Logout
               </button>
             </li>
+
+            {showDropdown && (
+              <ul>
+                <li><Link to="/profile">Your profile</Link></li>
+              </ul>
+            )}
 
           </>
         ) : (

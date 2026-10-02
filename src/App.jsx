@@ -13,6 +13,7 @@ import InstantConsultation from './Components/InstantConsultation/InstantConsult
 import Notification from './Components/Notification/Notification';
 import BookingConsultation from './Components/BookingConsultation';
 import ReviewForm from './Components/ReviewForm/ReviewForm';
+import ReviewForm from './Components/ProfileCard/ProfileCard';
 
 
 // Function component for the main App
@@ -37,6 +38,7 @@ function App() {
               <Route path="/instant-consultation" element={<InstantConsultation />} />
               <Route path='/book-consultation' element={<BookingConsultation />} />
               <Route path='/reviews' element={<ReviewForm />} />
+              <Route path='/profile' element={<ProfileCard />} />
             </Routes>
           </Notification >
         </BrowserRouter>
