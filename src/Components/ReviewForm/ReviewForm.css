@@ -36,4 +36,34 @@
   width: auto;
 }
 
+.reviews-table td button:disabled {
+  background: grey;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.stars {
+  color: grey;
+  font-size: 24pt;
+  cursor: pointer;
+}
+
+.stars-filled {
+  color: gold;
+  font-size: 24pt;
+  cursor: pointer;
+}
+
+.stars:hover {
+  color: gold;
+  font-size: 24pt;
+}
+
+.review-form-container {
+  background: white;
+  padding: 25px;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+
 
