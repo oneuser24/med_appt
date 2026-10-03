@@ -107,7 +107,7 @@ function GiveReviews( { index, doctor, dspeciality, dreview } ) {
         { isSubmitted && (<>
             <div>{Array(formData.rating).fill('⭐')}</div>
             <div>{formData.review}</div>
-            <div><i>by {formData.name}</i></div>
+            <div className='by-patient' style={{ fontStyle: 'italic' }}>by {formData.name}</div>
           </>
         )}
       </td>

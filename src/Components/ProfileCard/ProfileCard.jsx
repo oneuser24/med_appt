@@ -3,6 +3,7 @@
 import React, { useEffect, useState } from "react";
 import { API_URL } from "../../config";
 import { useNavigate } from "react-router-dom";
+import './ProfileCard.css';
 
 // Define a Function component called ProfileForm
 const ProfileForm = () => {
@@ -121,8 +122,8 @@ const ProfileForm = () => {
             <input
               type="text"
               name="name"
-              value={userDetails.name}
-              disabled // Disable the name field
+              value={updatedDetails.name}              
+              onChange={handleInputChange}
             />
           </label>
           {/* Create similar logic for displaying and editing name and phone from userDetails */}
@@ -131,8 +132,8 @@ const ProfileForm = () => {
             <input
               type="phone"
               name="phone"
-              value={userDetails.phone}
-              disabled // Disable the phone field
+              value={updatedDetails.phone}              
+              onChange={handleInputChange}
             />
           </label>
           <label>
@@ -141,7 +142,7 @@ const ProfileForm = () => {
               type="email"
               name="email"
               value={userDetails.email}
-              disabled // Disable the email field
+              disabled // Disable the email field              
             />
           </label>
           <button type="submit">Save</button>
